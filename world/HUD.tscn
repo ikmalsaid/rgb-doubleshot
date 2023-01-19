@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/text14.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scripts/HUD.gd" type="Script" id=2]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Killed" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 355.0
+margin_top = 50.0
+margin_right = -569.0
+margin_bottom = -526.0
+custom_fonts/font = ExtResource( 1 )
+text = "KILLED:"
+align = 1
+valign = 1
+
+[node name="Kills" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 472.0
+margin_top = 50.0
+margin_right = -452.0
+margin_bottom = -526.0
+custom_fonts/font = ExtResource( 1 )
+text = "KILLS:"
+align = 1
+valign = 1
+
+[node name="Score" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 592.0
+margin_top = 50.0
+margin_right = -332.0
+margin_bottom = -526.0
+custom_fonts/font = ExtResource( 1 )
+text = "SCORE:"
+align = 1
+valign = 1
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 41.0
+margin_top = 46.0
+margin_right = 159.0
+margin_bottom = 74.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quit Game"
+
+[node name="Reset" type="Button" parent="."]
+margin_left = 848.0
+margin_top = 46.0
+margin_right = 970.0
+margin_bottom = 74.0
+custom_fonts/font = ExtResource( 1 )
+text = "Reset Level"
+
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_Reset_pressed"]
